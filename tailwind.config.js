@@ -7,9 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+      fontFamily: {
+        parisienne: 'var(--font-parisienne)',
+        montserrat: 'var(--font-montserrat)',
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        primary: '#030712',
+        secondary: '#FFFFFF',
+        special_principal: '#257A9E',
+        special_secondary: '#2E99C5',
+        special_light: '#4EAED6',
       },
     },
   },

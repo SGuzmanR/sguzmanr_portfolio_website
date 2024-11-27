@@ -1,55 +1,36 @@
-"use client"
+import Link from "next/link";
+import Image from "next/image";
 
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { Marquee } from "@/constants";
+import { SocialLinks } from "@/constants";
 
 const Hero = () => {
-  const marqueeRef = useRef(null);
-
-  useEffect(() => {
-    const marqueeElement = marqueeRef.current;
-
-    gsap.to(marqueeElement, {
-      x: "-100%",
-      duration: 20,
-      repeat: -1,
-      ease: "linear",
-      delay: 0,
-    });
-
-    // Pause the animation on hover
-    marqueeElement.addEventListener("mouseenter", () => {
-      gsap.to(marqueeElement, { timeScale: 0 });
-    });
-
-    marqueeElement.addEventListener("mouseleave", () => {
-      gsap.to(marqueeElement, { timeScale: 1 });
-    });
-  }, []);
-
   return (
-    <section>
-      <div>
-        Discover the next stage of a founder&apos;s story
-      </div>
-      
-      <div>
-        Digital consulting for tech and SaaS, laying the framework to accelerate your growth to new heights.
+    <section className="screen-max-width max-sm:px-8 max-lg:px-8 max-xl:px-8 py-6 text-secondary">
+      <div className="flex flex-col gap-4 py-40 max-[500px]:py-20 max-lg:py-28">
+        <div className="text-sm font-light">
+          Hallo, I&apos;m <strong>Sergio Guzman</strong>, Full Stack Developer & Digital Solution Specialist
+        </div>
+
+        <div className="font-bold text-6xl max-[500px]:text-5xl">
+          Developing innovative digital solutions.
+        </div>
+
+        <div className="mt-10 w-full flex flex-row justify-start items-center max-[500px]:justify-center">
+          <Link href="#" className="text-base py-3 px-6 bg-special_principal hover:bg-special_secondary rounded-2xl transition-all duration-500">Work with me</Link>
+        </div>
       </div>
 
-      <div style={{ width: "100%", overflow: "hidden", whiteSpace: "nowrap" }}>
-        <div
-          ref={marqueeRef}
-          className="inline-block pl-[100%]"
-        >
-          {Marquee.map((marquee) => (
-            <span key={marquee.name} className="flex flex-row gap-10">{marquee.name}</span>
+      <div className="w-full flex justify-center items-center">
+        <div className="flex flex-row gap-4">
+          {SocialLinks.map((item) => (
+            <Link key={item.name} href={item.href} className="hover:scale-105 transition-all duration-700" target="_blank">
+              <Image src={item.src} width={40} height={40} alt={item.name} />
+            </Link>
           ))}
         </div>
       </div>
     </section>
   )
-}
+};
 
 export default Hero
