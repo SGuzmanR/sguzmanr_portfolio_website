@@ -14,9 +14,10 @@ module.exports = {
       colors: {
         primary: '#030712',
         secondary: '#FFFFFF',
-        special_principal: '#257A9E',
-        special_secondary: '#2E99C5',
-        special_light: '#4EAED6',
+        special_principal: '#0E7490',
+        special_secondary: '#0B5D73',
+        special_light: '#118BAD',
+        gradient_end: '#083344'
       },
     },
   },

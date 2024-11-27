@@ -50,7 +50,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body className={`${montserrat.className} ${parisienne.variable} bg-primary`}>
+      <body className={`${montserrat.className} ${parisienne.variable} bg-gradient-to-r from-primary to-gradient_end`}>
         <Navbar />
         {children}
         <Footer />
