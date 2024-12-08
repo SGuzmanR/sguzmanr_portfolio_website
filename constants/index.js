@@ -6,10 +6,40 @@ export const SocialLinks = [
 ];
 
 export const NavLinks = [
-  { name: "About me", href: "" },
-  { name: "Portfolio", href: "" },
-  { name: "Services", href: "" },
-  { name: "Contact", href: "" },
+  { name: "Portafolio", href: "#portfolio", special: false },
+  { name: "Servicios", href: "", special: false },
+  { name: "Accesorios Colombia", href: "", special: true },
+];
+
+export const PortfolioProyects = [
+  // { 
+  //   name: "Social Media | Talento Tech", 
+  //   description: "React, MongoDB", 
+  //   href: "https://talentotech-frontend-social-net.onrender.com/", 
+  //   src: "", 
+  //   src_hover: "" 
+  // },
+  // { 
+  //   name: "Apple Website | Clone", 
+  //   description: "NextJS, GSAP Animations, TailwindCSS, Framer Motion", 
+  //   href: "https://sguzmanr.github.io/apple_website/", 
+  //   src: "", 
+  //   src_hover: "" 
+  // },
+  // { 
+  //   name: "Xora SaaS | Landing Page", 
+  //   description: "", 
+  //   href: "", 
+  //   src: "", 
+  //   src_hover: "" 
+  // },
+  // { 
+  //   name: "MADAW | Landing Page", 
+  //   description: "", 
+  //   href: "", 
+  //   src: "", 
+  //   src_hover: "" 
+  // },
 ];
 
 export const FooterLinks = [

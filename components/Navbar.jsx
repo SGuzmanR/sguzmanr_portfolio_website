@@ -58,10 +58,10 @@ const Navbar = () => {
 
         {/* Mobile Menu */}
         {open && 
-          <div id="mobile-nav" className="fixed overflow-hidden flex flex-col justify-between py-20 h-screen top-0 left-0 w-screen bg-primary text-white z-10 translate-x-[100vw] opacity-0">
+          <div id="mobile-nav" className="fixed overflow-hidden flex flex-col justify-between py-32 h-screen top-0 left-0 w-screen bg-primary text-white z-10 translate-x-[100vw] opacity-0">
             <ul className="flex flex-col gap-6 justify-center items-center text-center">
               {NavLinks.map((link) => (
-                  <li key={link.name} className="font-light hover:underline transition-all">
+                  <li key={link.name} className={`font-light transition-all duration-300 ${link.special ? 'hover:bg-[#003087] rounded-md py-2 px-4' : 'hover:underline'}`}>
                     <Link href={link.href} onClick={handleOpen}>{link.name}</Link>
                   </li>
                 ))}
@@ -84,9 +84,9 @@ const Navbar = () => {
             </span>
           </div>
 
-          <ul className="flex flex-row gap-4 max-[500px]:hidden">
+          <ul className="flex flex-row gap-4 items-center max-[500px]:hidden">
             {NavLinks.map((link) => (
-              <li key={link.name} className="nav-links opacity-0 translate-y-[-100px] text-sm font-light hover:underline transition-all">
+              <li key={link.name} className={`nav-links opacity-0 translate-y-[-100px] text-sm font-light transition-all ${link.special ? 'hover:bg-[#003087] rounded-md py-2 px-4' : 'hover:underline'}`} >
                 <Link href={link.href}>{link.name}</Link>
               </li>
             ))}

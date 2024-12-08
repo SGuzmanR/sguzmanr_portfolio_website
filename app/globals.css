@@ -2,12 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --primary-color: '#030712';
-  --secondary-color: '#FFFFFF';
-  --special-color: '#57B3D8';
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -23,4 +17,20 @@ html, body {
   position: relative;
   margin-inline-end: auto;
   margin-inline-start: auto;
+}
+
+/* SCROLLBAR STYLES */
+/* width */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #083344;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #fff;
 }

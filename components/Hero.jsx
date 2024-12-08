@@ -64,7 +64,7 @@ const Hero = () => {
 
   return (
     <section className="screen-max-width max-sm:px-8 max-lg:px-8 max-xl:px-8 py-6 text-secondary select-none">
-      <div className="flex flex-col gap-4 py-40 max-[500px]:py-16 max-lg:py-30">
+      <div className="flex flex-col gap-4 py-40 max-sm:py-28 max-md:py-30 max-lg:py-30 max-xl:py-32">
         <div className="hero-main-text text-sm font-light opacity-0 translate-y-20">
           <span className="absolute left-[65px] top-[-15px] z-[-10]">
             <svg width="120" height="50" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
@@ -79,19 +79,19 @@ const Hero = () => {
             </svg>
           </span>
 
-          Hallo, I&apos;m <strong onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="hover:text-special_light transition-all duration-300">Sergio Guzman</strong>, Full Stack Developer & Digital Solution Specialist.
+          Hallo, Soy <strong onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave} className="hover:text-special_light transition-all duration-300">Sergio Guzman</strong>, Desarrollador Full Stack & especialista en soluciones digitales.
         </div>
 
         <div className="hero-secondary-text opacity-0 translate-y-20 font-bold text-6xl max-[500px]:text-4xl">
-          Developing innovative digital solutions.
+          Desarrollo de soluciones digitales innovadoras.
         </div>
 
         <div className="hero-button opacity-0 translate-y-20 mt-10 w-full flex flex-row justify-start items-center max-[500px]:justify-center">
-          <Link href="#" className="text-base py-3 px-6 bg-special_principal hover:bg-special_light rounded-2xl transition-all duration-500">Work with me</Link>
+          <Link href="#contact-me" className="text-base py-3 px-6 bg-special_principal hover:bg-special_light rounded-2xl transition-all duration-500">Contáctame</Link>
         </div>
       </div>
 
-      <div className="w-full flex justify-center items-center pt-16">
+      <div className="w-full flex justify-center items-center">
         <div className="flex flex-row gap-4">
           {SocialLinks.map((item) => (
             <Link key={item.name} href={item.href} className="transition-all duration-300 hero-socials opacity-0 translate-y-[-20px] hover:scale-110" target="_blank">
